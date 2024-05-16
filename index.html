@@ -1384,7 +1384,7 @@
                 const sphere = document.createElement("a-sphere");
                 sphere.setAttribute("color", "#crimson");
                 sphere.setAttribute("radius", "1.0");
-                sphere.setAttribute("position", "0 1 0");
+                sphere.setAttribute("position", "0 0 0");
                 scene.appendChild(sphere);
 
                 render();
@@ -1399,7 +1399,7 @@
                 box.setAttribute("height", "2");
                 box.setAttribute("width", "2");
                 box.setAttribute("depth", "2");
-                box.setAttribute("position", "0 1 0");
+                box.setAttribute("position", "0 0 0");
                 scene.appendChild(box);
 
                 render();
@@ -1413,7 +1413,7 @@
                 cylinder.setAttribute("color", "#FF9500");
                 cylinder.setAttribute("height", "2");
                 cylinder.setAttribute("radius", "0.5");
-                cylinder.setAttribute("position", "0 1.0 0");
+                cylinder.setAttribute("position", "0 0 0");
                 scene.appendChild(cylinder);
 
                 render();
@@ -1426,7 +1426,7 @@
                 const tetrahedron = document.createElement("a-tetrahedron");
                 tetrahedron.setAttribute("color", "#FF9500");
                 tetrahedron.setAttribute("radius", "0.5");
-                tetrahedron.setAttribute("position", "3 3 2");
+                tetrahedron.setAttribute("position", "0 0 0");
                 scene.appendChild(tetrahedron);
 
                 render();
@@ -1439,7 +1439,7 @@
                 const line = document.createElement("a-line");
                 line.setAttribute("color", "black");
                 line.setAttribute("opacity", "1.0");
-                line.setAttribute("points", "0 0 0, 0 1 0");
+                line.setAttribute("points", "0 0 0, 0 10 0");
                 scene.appendChild(line);
 
                 render();
@@ -1452,10 +1452,10 @@
                 const circle = document.createElement("a-circle");
                 circle.setAttribute("color", "#FF9500");
                 circle.setAttribute("radius", "0.5");
-                circle.setAttribute("position", "3 3 2");
+                circle.setAttribute("position", "0 0 0");
                 scene.appendChild(circle);
 
-                render();
+                render();                       
             }
 
     </script>
@@ -1901,7 +1901,22 @@
 
                 </div>
             </li>
-
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Help Menus
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" onclick="help01()">Help01</a>
+                    <a class="dropdown-item" onclick="help02()">Help01</a>
+                    <a class="dropdown-item" onclick="help03()">Help03</a>
+                    <a class="dropdown-item" onclick="help04()">Help04</a>
+                    <a class="dropdown-item" onclick="help05()">Help05</a>
+                    <a class="dropdown-item" onclick="help06()">Help06</a>
+                    <a class="dropdown-item" onclick="help07()">Help07</a>
+                    <a class="dropdown-item" onclick="help08()">Help08</a>
+                    <a class="dropdown-item" onclick="help09()">Help09</a>
+                </div>
+            </li>
 
 
             <li class="nav-item dropdown">
@@ -1913,10 +1928,10 @@
                     <a class="dropdown-item" onclick="newglbsphere()">Sphere</a>
                     <a class="dropdown-item" onclick="newglbcylinder()">Cylinder</a>
                     <a class="dropdown-item" onclick="newglbplane()">Plane</a>
-                    <a class="dropdown-item" onclick="newmodel-1()">Model1</a>
-                    <a class="dropdown-item" onclick="newmodel-2()">Model2</a>
-                    <a class="dropdown-item" onclick="newmodel-3()">Model3</a>
-                    <a class="dropdown-item" onclick="newmodel-4()">Model4</a>
+                    <a class="dropdown-item" onclick="newmodel1()">Model1</a>
+                    <a class="dropdown-item" onclick="newmodel2()">Model2</a>
+                    <a class="dropdown-item" onclick="newmodel3()">Model3</a>
+                    <a class="dropdown-item" onclick="newmodel4()">Model4</a>
 
                 </div>
             </li>

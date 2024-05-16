@@ -1,3 +1,124 @@
+//how to change textures on button click
+
+
+
+I'm trying load a gltf model to change the texture on button click by using the register component. Now I'm able to load and display the model as expected. However, I'm unable to reflect any changes when the button is clicked for the texture change.
+
+Here's what I have tried
+
+<div class=" radisi">
+<input type='button' class='radmi rad1' value='next' /></div>
+
+  <a-entity id="newmod" example gltf-model="src: url(model/straw.glb);"
+              position="0 1.8 -1" scale="1,1,1"></a-entity>
+
+
+
+    AFRAME.registerComponent('example', {
+
+    init: function() {
+    var el = this.el;
+    el.addEventListener('model-loaded', function (e) {
+    e.detail.model.traverse(function(child) {
+
+        if (child instanceof THREE.Mesh){
+             if (child.material.name == "Craem")  {
+             material.map =   new THREE.TextureLoader().load( "assets/img/choco.png" );
+                       }
+                    }
+                });
+             })
+          }
+      },3000)
+
+After registering the component I'm trying to access the texture change on click
+
+$(".radisi").click(function(){
+
+var el = this.el;
+        el.addEventListener('model-loaded', function (e) {
+        e.detail.model.traverse(function(child) {
+
+            if (child instanceof THREE.Mesh){
+                 if (child.material.name == "Craem")  {
+                 material.map =   new THREE.TextureLoader().load( "assets/img/tri.png" );
+                           }
+                        }
+                    });
+                 })
+});
+
+it says addEventListener of undefined. Kindly let me know where i'm missing out. thank you.
+
+    javascriptthree.jsaframe
+
+Share
+Edit
+Follow
+Get updates on questions and answers
+edited May 10, 2018 at 13:56
+asked May 10, 2018 at 13:40
+andy ram's user avatar
+andy ram
+21344 silver badges2121 bronze badges
+
+    Try setting material.needsUpdate = true; after you assign material.map? threejs.org/docs/#manual/introduction/How-to-update-things – 
+    manthrax
+    May 10, 2018 at 14:06 
+
+    edit: nvm - didn't read the question properly. But it looks like your click handler is not happening within the scope of your component. You'll need to keep a reference to the component and use that instead of "this.el", since "this" in your click handler will probably be the window or something. – 
+    manthrax
+    May 10, 2018 at 14:15
+    @manthrax tried using var el = window.el; again it it says addEventListener of undefined – 
+    andy ram
+    May 10, 2018 at 14:36
+
+Add a comment
+2 Answers
+Sorted by:
+1
+
+You registered a component to wait for the model-loaded and change the material.
+
+Then you have a click listener that waits again for model-loaded, when the model has probably already loaded by then. And you can't do this.el within a jQuery-powered click listener. this.el is supplied by the A-Frame component.
+
+Move the click listener into the component, and remove the model-loaded listener from the click listener.
+Share
+Edit
+Follow
+answered May 11, 2018 at 3:51
+ngokevin's user avatar
+ngokevin
+13.2k44 gold badges4242 silver badges8686 bronze badges
+
+    After moving click listener into the component and removing the model-loaded, can you please tell me what should i replace in place of "e" in e.detail.model.traverse ? e.detail.model.traverse(function(child) { console.log("clicked"); if (child instanceof THREE.Mesh) { if (child.material.name == "Craem") { child.material.map=new THREE.TextureLoader().load( "assets/img/vanilla.png" ); }}}); – 
+    andy ram
+    May 11, 2018 at 4:54 
+
+Add a comment
+Report this ad
+0
+
+Calling the mesh again. This worked for me,
+
+$(".radisi").click(function(){
+
+let object  = el.getObject3D('mesh');
+
+        object.traverse(function(child) {
+
+            if (child instanceof THREE.Mesh)
+                    {
+                        if (child.material.name == "Craem")  {
+                             child.material.map=new THREE.TextureLoader().load( "assets/img/strawberry.png" );;
+
+                                }
+                    }
+            });
+});
+
+
+
 //22.txt back up file
 <!DOCTYPE html>
 <html>

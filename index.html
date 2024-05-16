@@ -342,7 +342,22 @@
 </head>
 
 <body>
-    
+    <div id="myNavhelp01" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            
+            <h4>cadboxx can create Assemblies of 3D Models from ANY system!</h4>
+            <h4>It is not linked to another system but can use files from ANY. </h4>
+            <h4>Constrain parts relative to each other by applyingh physics constraints.</h4>
+            <h4>Export new geometry with textures embedded in the model.</h4>
+            <h4>Create stunning animations in Virtual Reality.</h4>
+            <h4>Create amazing animations and hybrid simulations to study the assembly.</h4>
+            <h4></h4>
+            <h4></h4>
+            <h4></h4>
+
+        </div>
+    </div>
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
@@ -1212,12 +1227,12 @@
             <a-light type="directional" directionalTarget="0 0 0" color="#94c6ff" position="-16 -16 -16" intensity="1"></a-light>
             <a-light type="directional" directionalTarget="0 0 0" color="#94c6ff" position="16 16 16" intensity="1"></a-light>
 
-            <a-light type="spot" color="#94c6ff" position="0 16 16" intensity="1"></a-light>
-            <a-light type="spot" color="#94c6ff" position="0 16 -16" intensity="1"></a-light>
-            <a-light type="spot" color="#94c6ff" position="16 16 16" intensity="1"></a-light>
-            <a-light type="spot" color="#94c6ff" position="-16 16 16" intensity="1"></a-light>
-            <a-light type="spot" color="#94c6ff" position="16 -16 16" intensity="1"></a-light>
-            <a-light type="spot" color="#94c6ff" position="16 0 16" intensity="1"></a-light>
+            <a-light type="spot" color="#94c6ff" position="0 16 16" intensity="2"></a-light>
+            <a-light type="spot" color="#94c6ff" position="0 16 -16" intensity="2"></a-light>
+            <a-light type="spot" color="#94c6ff" position="16 16 16" intensity="2"></a-light>
+            <a-light type="spot" color="#94c6ff" position="-16 16 16" intensity="2"></a-light>
+            <a-light type="spot" color="#94c6ff" position="16 -16 16" intensity="2"></a-light>
+            <a-light type="spot" color="#94c6ff" position="16 0 16" intensity="2"></a-light>
 
             <!--cameras-->
             <!--camera1 general cam for pIck and place ops -->
@@ -1749,7 +1764,7 @@
                 eigthCameraEl.setAttribute('camera', 'active', false);
                 var ninthCameraEl = document.querySelector('#cam9');
                 ninthCameraEl.setAttribute('camera', 'active', false);
-                var tenthCameraEl = document.querySelector('#cam10');
+                var tenthCameraEl = document.querySelector('#cam10');0
                 tenthCameraEl.setAttribute('camera', 'active', true);
             };
 
@@ -1758,12 +1773,18 @@
                 var scene = document.querySelector('a-scene');
                 scene.enterVR();
             };
-            /*whatitdoes*/
-            function xxzz() {
+            /*opens help nav 01*/
+            function help01() {
+                document.getElementById("myNavh1").style.display = "block";
+            }
 
+            function closehelp01() {
+                document.getElementById("myNavh1").style.display = "none";
+            }
+    </script>
             };
             /*whatitdoes*/
-            function xxzz() {
+            function help02() {
 
             };
             /*whatitdoes*/
@@ -1895,7 +1916,7 @@
                     <a class="dropdown-item" onclick="newcircle()">Circle</a>
                     <a class="dropdown-item" onclick="newcurve()">Curve</a>
                     <a class="dropdown-item" onclick="newpoint()">Poiint</a>
-                    <a class="dropdown-item" onclick="newline()">Line</a>
+                    <a class="dropdown-item" onclick="newline()">Line0</a>
                     <a class="dropdown-item" onclick="newsketch()">Sketch</a>
                     <a class="dropdown-item" onclick="newaxis()">Axis</a>
 

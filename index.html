@@ -342,24 +342,13 @@
 </head>
 
 <body>
-    <div id="myNavhelp01" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content">
-            
-            <h4>ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ</h4>!</h4>
-            <h4>It is not linked to another system but can use files from ANY. </h4>
-            <h4>Constrain parts relative to each other by applyingh physics constraints.</h4>
-            <h4>Export new geometry with textures embedded in the model.</h4>
-            <h4>Create stunning animations in Virtual Reality.</h4>
-            <h4>Create amazing animations and hybrid simulations to study the assembly.</h4>
-            <h4></h4>
-            <h4></h4>
-            <h4></h4>
+    <div id="myNav" class="overlay">
+        <div id="btnbar" class="inkine-block" >
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a ref="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
         </div>
-    </div>
-    <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
             <button class="clickable" onclick="cmm8()">Click X to enter</button>
             <h4>cadboxx can create Assemblies of 3D Models from ANY system!</h4>
@@ -1306,7 +1295,7 @@
     <script src="js/aframe-physics-system.min.js" ></script>
     <script>
             document.querySelector('a-scene').addEventListener('loaded', function () {
-                document.getElementById("myNavhelp01").style.display = "block";
+                document.getElementById("myNav").style.display = "block";
             })
 
     </script>

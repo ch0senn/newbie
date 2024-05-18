@@ -276,11 +276,55 @@
 </head>
 
 <body>
-    <div id="myNav" class="overlay">
+    <div id="myNavh1" class="overlay">
         <div class="overlay-content">
             <center>
             <div id="btnnbar" display="inline-block"  >
-                <button class="clickable" onclick="cmm2()">Click X to enter</button>
+                <button class="clickable" onclick="help01()">1111111 to enter</button>
+                <button class="clickable" onclick="help02()">Click X to enter</button>
+                <button class="clickable" onclick="help03()">Click X to enter</button>
+            </div>
+        </center>
+        <center>
+            <h4>cadboxx can create Assemblies of 3D Models from ANY system!</h4>
+            <h4>It is not linked to another system but can use files from ANY. </h4>
+            <h4>Constrain parts relative to each other by applyingh physics constraints.</h4>
+            <h4>Export new geometry with textures embedded in the model.</h4>
+            <h4>Create stunning animations in Virtual Reality.</h4>
+            <h4>Create amazing animations and hybrid simulations to study the assembly.</h4>
+            <h4></h4>
+            <h4></h4>
+            <h4></h4>
+        </center>
+        </div>
+    </div>
+    <div id="myNavh2" class="overlay">
+        <div class="overlay-content">
+            <center>
+            <div id="btnnbar" display="inline-block"  >
+                <button class="clickable" onclick="cmm2()">2222222 to enter</button>
+                <button class="clickable" onclick="cmm4()">Click X to enter</button>
+                <button class="clickable" onclick="cmm1()">Click X to enter</button>
+            </div>
+        </center>
+        <center>
+            <h4>cadboxx can create Assemblies of 3D Models from ANY system!</h4>
+            <h4>It is not linked to another system but can use files from ANY. </h4>
+            <h4>Constrain parts relative to each other by applyingh physics constraints.</h4>
+            <h4>Export new geometry with textures embedded in the model.</h4>
+            <h4>Create stunning animations in Virtual Reality.</h4>
+            <h4>Create amazing animations and hybrid simulations to study the assembly.</h4>
+            <h4></h4>
+            <h4></h4>
+            <h4></h4>
+        </center>
+        </div>
+    </div>
+    <div id="myNavh3" class="overlay">
+        <div class="overlay-content">
+            <center>
+            <div id="btnnbar" display="inline-block"  >
+                <button class="clickable" onclick="cmm2()">333333 to enter</button>
                 <button class="clickable" onclick="cmm4()">Click X to enter</button>
                 <button class="clickable" onclick="cmm1()">Click X to enter</button>
             </div>
@@ -1700,20 +1744,18 @@
             /*opens help nav 01*/
             function help01() {
                 document.getElementById("myNavh1").style.display = "block";
-            }
+            };
 
             function closehelp01() {
                 document.getElementById("myNavh1").style.display = "none";
-            }
-    </script>
             };
             /*whatitdoes*/
             function help02() {
-
+                document.getElementById("myNavh2").style.display = "block";
             };
             /*whatitdoes*/
-            function xxzz() {
-
+            function closehelp02() {
+                document.getElementById("myNavh2").style.display = "none";
             };
             /*whatitdoes*/
             function xxzz() {
@@ -1788,7 +1830,9 @@
                     <a class="dropdown-item" href="https://sketchfab.com/fasteng/" target="_blank" rel="noopener">SKETCHFAB</a>
                     <a class="dropdown-item" href="https://hubs.mozilla.com/" target="_blank" rel="noopener">HUBS</a>
                     <a class="dropdown-item" href="https://hubs.mozilla.com/spoke" target="_blank" rel="noopener">SPOKE</a>
-                        <a class="dropdown-item" href="V1_NEW.html" target="_blank" rel="noopener">V1_NEW</a>
+                    <a class="dropdown-item" href="https://glitch.com/" target="_blank" rel="noopener">GLITCH</a>
+   
+                    <a class="dropdown-item" href="V1_NEW.html" target="_blank" rel="noopener">V1_NEW</a>
                         <a class="dropdown-item" href="V2_NEW.html" target="_blank" rel="noopener">V2_NEW</a>
                         <a class="dropdown-item" href="V3_NEW.html" target="_blank" rel="noopener">V3_NEW</a>
                         <a class="dropdown-item" href="V4_NEW.html" target="_blank" rel="noopener">V4_NEW</a>
@@ -1801,7 +1845,35 @@
         
                     
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    textures
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" onclick="matl01()">M01</a>
+                    <a class="dropdown-item" onclick="matl02()">M02</a>
+                    <a class="dropdown-item" onclick="matl03()">M03</a>
+                    <a class="dropdown-item" onclick="matl04()">M04</a>
+                    <a class="dropdown-item" onclick="matl05()">M05</a>
+                    <a class="dropdown-item" onclick="matl06()">M06</a>
+                    <a class="dropdown-item" onclick="matl07()">M07</a>
+                    <a class="dropdown-item" onclick="matl08()">M08</a>
+                    <a class="dropdown-item" onclick="matl09()">M09</a>
+                    <a class="dropdown-item" onclick="matl10()">M10</a>
+                    <a class="dropdown-item" onclick="matl11()">M11</a>
+                    <a class="dropdown-item" onclick="matl12()">M12</a>
+                    <a class="dropdown-item" onclick="matl13()">M12</a>
+                    <a class="dropdown-item" onclick="matl14()">M14</a>
+                    <a class="dropdown-item" onclick="matl15()">M15</a>
+
+
+
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    geometry
+                </a>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     textures

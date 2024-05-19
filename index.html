@@ -280,9 +280,9 @@
         <div class="overlay-content">
             <center>
             <div id="btnnbar" display="inline-block"  >
-                <button class="clickable" onclick="help01()">1111111 to enter</button>
-                <button class="clickable" onclick="help02()">Click X to enter</button>
-                <button class="clickable" onclick="help03()">Click X to enter</button>
+                <button class="clickable" onclick="myNavh1()"> HELP 1</button>
+                <button class="clickable" onclick="myNavh2()">HELP 2</button>
+                <button class="clickable" onclick="myNavh3()">HELP 3</button>
             </div>
         </center>
         <center>
@@ -302,9 +302,9 @@
         <div class="overlay-content">
             <center>
             <div id="btnnbar" display="inline-block"  >
-                <button class="clickable" onclick="cmm2()">2222222 to enter</button>
-                <button class="clickable" onclick="cmm4()">Click X to enter</button>
-                <button class="clickable" onclick="cmm1()">Click X to enter</button>
+                <button class="clickable" onclick="myNavh1()"> HELP 1</button>
+                <button class="clickable" onclick="myNavh2()">HELP 2</button>
+                <button class="clickable" onclick="myNavh3()">HELP 3</button>
             </div>
         </center>
         <center>
@@ -324,9 +324,9 @@
         <div class="overlay-content">
             <center>
             <div id="btnnbar" display="inline-block"  >
-                <button class="clickable" onclick="cmm2()">333333 to enter</button>
-                <button class="clickable" onclick="cmm4()">Click X to enter</button>
-                <button class="clickable" onclick="cmm1()">Click X to enter</button>
+                <button class="clickable" onclick="myNavh1()"> HELP 1</button>
+                <button class="clickable" onclick="myNavh2()">HELP 2</button>
+                <button class="clickable" onclick="myNavh3()">HELP 3</button>
             </div>
         </center>
         <center>
@@ -1487,13 +1487,31 @@
             }
 
             function closeNav() {
-                document.getElementById("myNav").style.display = "none";
+                                document.getElementById("myNav").style.display = "none";
+
             }
     </script>
     <script>
-            function myNav() {
+            function myNavh1() {
+                document.getElementById("myNavh1").style.display = "block";
+                document.getElementById("myNavh2").style.display = "none";
+                document.getElementById("myNavh3").style.display = "none";
 
             }
+            function myNavh2() {
+                document.getElementById("myNavh2").style.display = "block";
+                document.getElementById("myNavh1").style.display = "none";
+                document.getElementById("myNavh3").style.display = "none";
+
+            }
+            function myNavh3() {
+                document.getElementById("myNavh3").style.display = "block";
+                document.getElementById("myNavh2").style.display = "none";
+                document.getElementById("myNavh1").style.display = "none";
+
+            }
+
+        
     </script>
     <script>
             function cmm1() {//set position relative to object plane

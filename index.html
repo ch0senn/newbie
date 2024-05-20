@@ -339,19 +339,72 @@
             </div>
         </center>
         <center>
-            <h4>3333333333</h4>
-            <h4>It is not linked to another system but can use files from ANY. </h4>
-            <h4>Constrain parts relative to each other by applyingh physics constraints.</h4>
-            <h4>Export new geometry with textures embedded in the model.</h4>
-            <h4>Create stunning animations in Virtual Reality.</h4>
-            <h4>Create amazing animations and hybrid simulations to study the assembly.</h4>
+            <h4>POSITION AND CONSTRAIN</h4>
+            <h4>IF YOUR JOINT IS THE SAME AS ONE OF OUR TEMPLATES </h4>
+            <h4>THEN WE RECCOMEND USING A TEMPLATE.</h4>
+            <h4></h4>
+            <h4></h4>
+            <h4></h4>
             <h4></h4>
             <h4></h4>
             <h4></h4>
         </center>
-        </div>
+        </div>        
     </div>
-        
+    <div id="myNavh04" class="overlay">
+        <div class="overlay-content">
+            <center>
+            <div id="btnnbar" display="inline-block"  >
+                <button class="clickable" onclick="myNavh1()">HELP 1</button>
+                <button class="clickable" onclick="myNavh2()">HELP 2</button>
+                <button class="clickable" onclick="myNavh3()">HELP 3</button>
+                <button class="clickable" onclick="myNavh4()"> HELP 4</button>
+                <button class="clickable" onclick="myNavh5()">HELP 5</button>
+                <button class="clickable" onclick="closeAllNav()">CLOSE</button>
+                
+            </div>
+        </center>
+        <center>
+            <h4>POP AND ROLL</h4>
+            <h4>IF YOUR JOINT IS THE SAME AS ONE OF OUR TEMPLATES </h4>
+            <h4>THEN WE RECCOMEND USING A TEMPLATE.</h4>
+            <h4></h4>
+            <h4></h4>
+            <h4></h4>
+            <h4></h4>
+            <h4></h4>
+            <h4></h4>
+        </center>
+        </div>        
+    </div>
+    <div id="myNavh05" class="overlay">
+        <div class="overlay-content">
+            <center>
+            <div id="btnnbar" display="inline-block"  >
+                <button class="clickable" onclick="myNavh1()">HELP 1</button>
+                <button class="clickable" onclick="myNavh2()">HELP 2</button>
+                <button class="clickable" onclick="myNavh3()">HELP 3</button>
+                <button class="clickable" onclick="myNavh4()"> HELP 4</button>
+                <button class="clickable" onclick="myNavh5()">HELP 5</button>
+                <button class="clickable" onclick="closeAllNav()">CLOSE</button>
+                
+            </div>
+        </center>
+        <center>
+            <h4>ROLL AND POP</h4>
+            <h4></h4>
+            <h4>THEN WE RECCOMEND USING A TEMPLATE.</h4>
+            <h4></h4>
+            <h4></h4>
+            <h4></h4>
+            <h4></h4>
+            <h4></h4>
+            <h4></h4>
+        </center>
+        </div>        
+    </div>
+
+    
     <div class="container-flex">
         <!--<a-scene physics="gravity:-10;friction:0.1;restitution:0.5" debug="true" stats="false" loading-screen={`enabled: false`}>
             <a-assets>-->
@@ -1509,21 +1562,44 @@
                 document.getElementById("myNavh01").style.display = "block";
                 document.getElementById("myNavh02").style.display = "none";
                 document.getElementById("myNavh03").style.display = "none";
+                document.getElementById("myNavh04").style.display = "none";
+                document.getElementById("myNavh05").style.display = "none";
 
             }
             function myNavh2() {
                 document.getElementById("myNavh02").style.display = "block";
                 document.getElementById("myNavh01").style.display = "none";
                 document.getElementById("myNavh03").style.display = "none";
+                document.getElementById("myNavh04").style.display = "none";
+                document.getElementById("myNavh05").style.display = "none";
 
             }
             function myNavh3() {
                 document.getElementById("myNavh03").style.display = "block";
                 document.getElementById("myNavh02").style.display = "none";
                 document.getElementById("myNavh01").style.display = "none";
+                document.getElementById("myNavh04").style.display = "none";
+                document.getElementById("myNavh05").style.display = "none";
+
+            }
+            function myNavh4() {
+                document.getElementById("myNavh04").style.display = "block";
+                document.getElementById("myNavh02").style.display = "none";
+                document.getElementById("myNavh03").style.display = "none";
+                document.getElementById("myNavh01").style.display = "none";
+                document.getElementById("myNavh05").style.display = "none";
+
+            }
+            function myNavh5() {
+                document.getElementById("myNavh05").style.display = "block";
+                document.getElementById("myNavh02").style.display = "none";
+                document.getElementById("myNavh03").style.display = "none";
+                document.getElementById("myNavh04").style.display = "none";
+                document.getElementById("myNavh01").style.display = "none";
 
             }
 
+        
         
     </script>
     <script>

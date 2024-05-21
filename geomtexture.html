@@ -1229,7 +1229,33 @@
                  <a-entity id="whsupt" gltf-model="#bb043" position="0 0 0" rotation="0 0 0" scale="10 10 10" static-body click-impulse>
 
                  </a-entity>
-                 
+            
+                <!-- UI widgets template -->
+            <a-entity position="0 1 0" rotation="0 0 0" scale="2 2 2">
+                <a-entity id="target"
+                          position="0 0.5 -1.5"
+                          geometry="primitive: torusKnot; radius: 0.5; radiusTubular: 0.02; p: 3; q: 2"
+                          material="color: orange">
+                </a-entity>
+            
+                <!-- Button, custom styles -->
+                <a-entity id="buttonCustom" ui-button="value: 0; base: beveled-square, blue; top: square, darkgreen; pressed: yellow, offset" position="-0.7 0.1 -0.3" rotation="45 0 0"></a-entity>
+            
+                <!-- Button, uses default styles -->
+                <a-entity id="buttonStd" ui-button position="-0.35 0.1 -0.3" rotation="45 0 0"></a-entity>
+            
+                <!-- Rotary Knob -->
+                <a-entity id="rotaryKnob" ui-rotary position="0 0.1 -0.3" rotation="45 0 0"></a-entity>
+            
+                <!-- Toggle Switch -->
+                <a-entity id="toggleSwitch" ui-toggle="value: 0" position="0.3 0.1 -0.3" rotation="45 0 0"></a-entity>
+            
+                <!-- Slider -->
+                <a-entity id="valueSlider" ui-slider="min: 1; max: 10; value: 5" position="0 0 0" rotation></a-entity>
+              
+            </a-entity>
+
+            
 
             <a-lines points="0 0 0, 0 10 0" color="blue"></a-lines>
 
@@ -2443,7 +2469,60 @@
             knot.setAttribute('material', 'src', '#m18');
         };
 </script>
+<script>
+    // Object which we're going to modify
+    var targetEntity = document.querySelector('#target');
 
+    // picks random color buttonCustom
+    var buttonCustom = document.querySelector('#buttonCustom');
+    buttonCustom.addEventListener('pressed', function (e) {
+        var scene = document.querySelector('a-scene');
+        if (scene.getAttribute('stats')) {
+            scene.setAttribute('stats', 'false');
+        } else {
+            scene.setAttribute('stats', 'true');
+        }
+    });
+
+    // picks random color buttonCustom
+    var buttonStd = document.querySelector('#buttonStd');
+    buttonStd.addEventListener('pressed', function () {
+        var randomHexColor = Math.floor(Math.random() * 0xffffff).toString(16);
+        targetEntity.setAttribute('material', {
+            color: '#' + randomHexColor
+        });
+    });
+
+    // changes size
+    var valueSlider = document.querySelector('#valueSlider');
+    valueSlider.addEventListener('change', function (e) {
+        targetEntity.setAttribute('geometry', { q: e.detail.value });
+    });
+
+    // animates object
+    var toggleSwitch = document.querySelector('#toggleSwitch');
+    var interval;
+    toggleSwitch.addEventListener('change', function (e) {
+        if (e.detail.value) {
+            interval = setInterval(function () {
+                targetEntity.setAttribute('rotation', {
+                    y: targetEntity.getAttribute('rotation').y + 1
+                })
+            }, 10);
+        } else {
+            clearInterval(interval);
+        }
+    });
+
+    // changes tubular radius
+    var rotaryKnob = document.querySelector('#rotaryKnob');
+    rotaryKnob.addEventListener('change', function (e) {
+        var value = e.detail.value * 0.1;
+        targetEntity.setAttribute('geometry', {
+            radiusTubular: targetEntity.getAttribute('geometry').radiusTubular + value
+        });
+    });
+</script>
 
 
 

@@ -1,3 +1,36 @@
+//loading textures
+https://jsfiddle.net/ugatnw6L/
+
+<script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script>
+      AFRAME.registerComponent("load-texture", {
+        init: function() {
+          var el = this.el
+          var textureLoader = new THREE.TextureLoader();
+          var  url = "https://i.imgur.com/wjobVTN.jpg"
+          textureLoader.load(url,
+            // onLoad
+            function(tex) {
+              let mesh = el.getObject3D('mesh')
+              mesh.material.map = tex
+            },
+            // onProgress
+            undefined,
+            //onError
+            function(err) {
+              console.error('An error happened.');
+            });
+        }
+      })
+
+    </script>
+    <a-scene>
+      <a-box position="-1 0.5 -3" load-texture></a-box>
+    </a-scene>
+
+
+
+
 //how to change textures on button click
 
 

@@ -1266,13 +1266,36 @@
             <a-light type="spot" color="#94c6ff" position="16 0 16" intensity="2"></a-light>
 
             <!--cameras-->
-            <!--camera1 general cam for pIck and place ops -->
+            <!--camera1 general cam for INTERACTION AND MENU SELECTION -->
+            <a-entity camera id="cam1" active="true" look-controls wasd-controls position="0 5 15"
+                		  capture-mouse
+                		  raycaster cursor="rayOrigin:mouse"
+                		  body="type: static; shape: sphere; sphereRadius: 0.001"
+                		  super-hands="colliderEvent: raycaster-intersection;
+                             colliderEventProperty: els;
+                             colliderEndEvent:raycaster-intersection-cleared;
+                             colliderEndEventProperty: clearedEls;">
+                </a-entity>
+                
+                <a-entity id="cam2" position="-12 12 12">
+                	<a-camera look-controls wasd-controls active="false"></a-camera>
+                </a-entity>
+                <a-entity id="cam3" position="12 -8 12" look-controls>
+                	<a-camera look-controls wasd-controls active="false"></a-camera>
+                </a-entity>
+                
+                <a-entity id="cam4" position="12 -8 12" look-controls>
+                	<a-camera look-controls wasd-controls orbit-controls="target: 0 0 0; minDistance: 0.5; maxDistance: 18; initialPosition: 0 5 7.5" active="false">></a-camera>
+                </a-entity>
+                
+                <a-camera id="cam5" position="0 6 12" look-controls active="false">
+                	<a-cursor intersection-spawn="event: click; mixin: voxelcdodd1"></a-cursor>
+                </a-camera>
+                <a-camera id="cam6" position="12 6 0" look-controls active="false">
+                	<!---->
 
-            <!--camera2 general object selection-->
             
-            <!--camera3 ui intyeractive cam for selecting bodies and choosing options in the ddmenus -->
-
-
+            
             <!--camera4 object impulse and drag and dropp ops -->
 
 

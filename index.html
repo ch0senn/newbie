@@ -1776,11 +1776,25 @@
                 var scene = document.querySelector('a-scene');
                 scene.enterVR();
             };
-            /*whatitdoes*/
+
+            function evr() {
+                document.querySelector('a-scene').enterVR();
+            };
+            function screenshotr() {
+                document.querySelector('a-scene').components.screenshot.capture('equirectangular');
+            };
+            function screenshotp() {
+                document.querySelector('a-scene').components.screenshot.capture('perspective');
+            };
+            function cammy() {
+                document.querySelector('a-scene').components.screenshot.capture('perspective');
+            };
+        
+            /*perspective image*/
             function xxzz() {
 
             };
-            /*whatitdoes*/
+            /*orth  imagen*/
             function xxzz() {
 
             };
@@ -1895,7 +1909,7 @@
 
                 </div>
             </li>
-            <li class="nav-item dropdown">
+           <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     geometry
                 </a>
@@ -1914,8 +1928,26 @@
 
                 </div>
             </li>
-
-
+-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    utiks
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" onclick="evr()">EnterVR</a>
+                    <a class="dropdown-item" onclick="screenshotp()">PERSP</a>
+                    <a class="dropdown-item" onclick="screenshotr()">RECT</a>
+                   <a class="dropdown-item" onclick="pvis1()">PVIS1</a>
+                    <a class="dropdown-item" onclick="pvis2()">PVIS2</a>
+                    <a class="dropdown-item" onclick="pvis3()">PVIS3</a>
+<!--                    <a class="dropdown-item" onclick="newcurve()">PVIS3</a>
+                    <a class="dropdown-item" onclick="newpoint()">Poiint</a>
+                    <a class="dropdown-item" onclick="newline()">Line</a>
+                    <a class="dropdown-item" onclick="newsketch()">Sketch</a>
+                    <a class="dropdown-item" onclick="newaxis()">Axis</a>
+-->
+                </div>
+            </li>
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -28,6 +28,21 @@
     <script src="https://unpkg.com/aframe-teleport-controls@0.2.x/dist/aframe-teleport-controls.min.js"></script>
     <script src="https://unpkg.com/aframe-controller-cursor-component@0.2.x/dist/aframe-controller-cursor-component.min.js"></script>
 
+    <!--extra components gltf-exporter mouse-spawner grab   -->
+    <!--reaction components-->
+    <script src="reaction_components/clickable.js"></script>
+    <script src="reaction_components/draggable.js"></script>
+    <script src="reaction_components/drag-droppable.js"></script>
+    <script src="reaction_components/hoverable.js"></script>
+    <script src="reaction_components/stretchable.js"></script>
+    <script src="reaction_components/droppable.js"></script>
+    <script src="reaction_components/grabbable.js"></script>
+    <link rel="stylesheet" type="text/css" href="aframe.css">
+
+
+    
+    <!--end extras-->
+    
     <script src="js/AAAA/grab.js"></script>
     <script src="js/AAAA/grab.min.js"></script>
     <script src="js/grab-lock.js"></script>
@@ -43,15 +58,7 @@
     <script src="aframe-mouse-cursor-component.min.js"></script>
     <script src="aframe-gltf-exporter-component.min.js"></script>
 
-    <!--reaction components-->
-    <script src="reaction_components/clickable.js"></script>
-    <script src="reaction_components/draggable.js"></script>
-    <script src="reaction_components/drag-droppable.js"></script>
-    <script src="reaction_components/hoverable.js"></script>
-    <script src="reaction_components/stretchable.js"></script>
-    <script src="reaction_components/droppable.js"></script>
-    <script src="reaction_components/grabbable.js"></script>
-    <link rel="stylesheet" type="text/css" href="aframe.css">
+    
     <script>
         AFRAME.registerComponent('cai', {
             init: function () {
@@ -1195,7 +1202,20 @@
             <a-entity id="gg2" gltf-model="#floor-t" position="0 0 0" rotation="0 0 0" static-body visible="true"></a-entity>
 -->
 
-            <!--templates-->
+            <!--templates spinner -->
+<!--spinner-->
+<a-entity>
+    <a-entity>
+    
+    </a-entity>   
+    <a-entity>
+        
+    </a-entity>
+    
+</a-entity>
+
+            <!--end spinner-->
+            
             <!--crankshaft
             <a-entity id="rotorxx" position="-17.5 0 0" rotation="0 0 0" scale="1 1 1">
 
@@ -1785,11 +1805,7 @@
             };
             function screenshotp() {
                 document.querySelector('a-scene').components.screenshot.capture('perspective');
-            };
-            function cammy() {
-                document.querySelector('a-scene').components.screenshot.capture('perspective');
-            };
-        
+            };                    
             /*perspective image*/
             function xxzz() {
 
@@ -1871,8 +1887,9 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="https://sketchfab.com/fasteng/" target="_blank" rel="noopener">SKETCHFAB</a>
-                    <a class="dropdown-item" href="https://hubs.mozilla.com/" target="_blank" rel="noopener">HUBS</a>
+                    <!--<a class="dropdown-item" href="https://hubs.mozilla.com/" target="_blank" rel="noopener">HUBS</a>
                     <a class="dropdown-item" href="https://hubs.mozilla.com/spoke" target="_blank" rel="noopener">SPOKE</a>
+   -->                 
                     <a class="dropdown-item" href="https://glitch.com/" target="_blank" rel="noopener">GLITCH</a>
    
                     <a class="dropdown-item" href="V1_NEW.html" target="_blank" rel="noopener">CADBOXX</a>
@@ -1892,7 +1909,7 @@
                     EXPORT
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" id="export-scene">SCENE</a>
+                    <a class="dropdown-item" id="export-scene" onclick="export()" >Scene   </a>
                     <a class="dropdown-item" id="export-scene-bin">GLB</a>
                     <a class="dropdown-item" id="export-assy">ASSEMBLY</a>
                     <a class="dropdown-item" id="export-redbnn">BNN</a>
@@ -1967,7 +1984,7 @@
 -->
                 </div>
             </li>
-
+<!--
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     GLB GEOM
@@ -2030,7 +2047,7 @@
                     <a class="dropdown-item" onclick="newcircle()">Circle</a>
 
                 </div>
-            </li>
+            </li>-->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     PART-VIS

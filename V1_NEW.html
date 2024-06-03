@@ -271,7 +271,7 @@
     </style>
 </head>
 <body>
-    <div id="container">
+   <!-- <div id="container">
         <button id="export-scene" class="button"><span>Export GLTF</span></button>
         <button id="export-scene-bin" class="button"><span>Export GLB</span></button>
         <button id="export-sphere" class="button"><span>Export Sphorb</span></button>
@@ -283,7 +283,7 @@
 
 
 
-    </div>
+    </div>-->
 
     <a-scene gltf-exporter physics renderer="colorManagement: true;" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="">
         <a-assets>
@@ -2380,20 +2380,38 @@
 
 
 
-    <!--dd-menu-start-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <!--<a class="navbar-brand" href="#">CADBOXX</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-            -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+    <img src="img/cad-boxx.png" width="30" height="30" alt="">
+  </a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    PLATFORMS
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://sketchfab.com/fasteng/" target="_blank" rel="noopener">SKETCHFAB</a>
+                    <!--<a class="dropdown-item" href="https://hubs.mozilla.com/" target="_blank" rel="noopener">HUBS</a>
+                    <a class="dropdown-item" href="https://hubs.mozilla.com/spoke" target="_blank" rel="noopener">SPOKE</a>
+   -->                 
+                    <a class="dropdown-item" href="https://glitch.com/" target="_blank" rel="noopener">GLITCH</a>
+   
+                    <a class="dropdown-item" href="V1_NEW.html" target="_blank" rel="noopener">CADBOXX</a>
+                        
+                    <a class="dropdown-item" href="V2_NEW.html" target="_blank" rel="noopener">V2_NEW</a>
+                    <a class="dropdown-item" href="V3_NEW.html" target="_blank" rel="noopener">V3_NEW</a>
+                    <a class="dropdown-item" href="V4_NEW.html" target="_blank" rel="noopener">V4_NEW</a>
+                    <a class="dropdown-item" href="V5_NEW.html" target="_blank" rel="noopener">V5_NEW</a>
+                    
+                    
+                        
+                </div>
+            </li>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     EXPORT
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" id="export-scene">SCENE</a>
+                    <a class="dropdown-item" id="export-scene" onclick="export()" >Scene   </a>
                     <a class="dropdown-item" id="export-scene-bin">GLB</a>
                     <a class="dropdown-item" id="export-assy">ASSEMBLY</a>
                     <a class="dropdown-item" id="export-redbnn">BNN</a>
@@ -2412,7 +2430,10 @@
                     views
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" onclick="cmm1()">Cam1</a>
+                    <a class="dropdown-item" onclick="window.open("https://hubs.mozilla.com", "_blank");">Hubs</a>
+                    <a class="dropdown-item" onclick="window.open("https://spoke.mozilla.com", "_blank");">Spoke</a>
+                    <a class="dropdown-item" onclick="window.open("https://sketchfab.com", "_blank");">Sketchfab</a>
+
                     <a class="dropdown-item" onclick="cmm2()">Cam2</a>
                     <a class="dropdown-item" onclick="cmm3()">Cam3</a>
                     <a class="dropdown-item" onclick="cmm4()">Cam4</a>
@@ -2426,7 +2447,7 @@
 
                 </div>
             </li>
-            <li class="nav-item dropdown">
+           <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     geometry
                 </a>
@@ -2445,9 +2466,27 @@
 
                 </div>
             </li>
-
-
-
+-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    utiks
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" onclick="evr()">EnterVR</a>
+                    <a class="dropdown-item" onclick="screenshotp()">PERSP</a>
+                    <a class="dropdown-item" onclick="screenshotr()">RECT</a>
+                   <a class="dropdown-item" onclick="pvis1()">PVIS1</a>
+                    <a class="dropdown-item" onclick="pvis2()">PVIS2</a>
+                    <a class="dropdown-item" onclick="pvis3()">PVIS3</a>
+<!--                    <a class="dropdown-item" onclick="newcurve()">PVIS3</a>
+                    <a class="dropdown-item" onclick="newpoint()">Poiint</a>
+                    <a class="dropdown-item" onclick="newline()">Line</a>
+                    <a class="dropdown-item" onclick="newsketch()">Sketch</a>
+                    <a class="dropdown-item" onclick="newaxis()">Axis</a>
+-->
+                </div>
+            </li>
+<!--
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     GLB GEOM
@@ -2461,16 +2500,10 @@
                     <a class="dropdown-item" onclick="newmodel-2()">Model2</a>
                     <a class="dropdown-item" onclick="newmodel-3()">Model3</a>
                     <a class="dropdown-item" onclick="newmodel-4()">Model4</a>
-                    <a class="dropdown-item" onclick="newmodel-5()">Model5</a>
-                    <a class="dropdown-item" onclick="newmodel-6()">Model6</a>
-                    <a class="dropdown-item" onclick="newmodel-7()">Model7</a>
-                    <a class="dropdown-item" onclick="newmodel-8()">Model8</a>
-                    <a class="dropdown-item" onclick="newmodel-9()">Model9</a>
-                    <a class="dropdown-item" onclick="newmodel-0()">Model0</a>
 
                 </div>
             </li>
-            <!--<li class="nav-item dropdown">
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Joints
                 </a>
@@ -2516,7 +2549,7 @@
                     <a class="dropdown-item" onclick="newcircle()">Circle</a>
 
                 </div>
-            </li>
+            </li>-->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     PART-VIS
@@ -2534,7 +2567,7 @@
                     <a class="dropdown-item" onclick="visp9()">P9</a>
 
                 </div>
-            </li-->
+            </li>
         </div>
     </nav>
 

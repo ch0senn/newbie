@@ -1907,223 +1907,56 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-    <img src="img/cad-boxx.png" width="30" height="30" alt="">
-  </a>
+            <img src="img/cad-boxx.png" width="30" height="30" alt="">
+          </a>
                 
                 <div class="dropdown">
-                  <button data-mdb-button-init data-mdb-ripple-init data-mdb-dropdown-init class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-mdb-toggle="dropdown" aria-expanded="false">
-                platforms
-                  </button>  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li>
-                      <a class="dropdown-item" href="#">Another action</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Submenu &raquo;
-                      </a>
-                      <ul class="dropdown-menu dropdown-submenu">
+                  <div class="dropdown">
+                      <button data-mdb-button-init data-mdb-ripple-init data-mdb-dropdown-init class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown" aria-expanded="false">
+                        Dropdown button
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
                         <li>
-                          <a class="dropdown-item" href="#">Submenu item 1</a>
+                          <a class="dropdown-item" href="#">Another action</a>
                         </li>
                         <li>
-                          <a class="dropdown-item" href="#">Submenu item 2</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                          <a class="dropdown-item" href="#">
+                            Submenu &raquo;
+                          </a>
                           <ul class="dropdown-menu dropdown-submenu">
                             <li>
-                              <a class="dropdown-item" href="#">Multi level 1</a>
+                              <a class="dropdown-item" href="#">Submenu item 1</a>
                             </li>
                             <li>
-                              <a class="dropdown-item" href="#">Multi level 2</a>
+                              <a class="dropdown-item" href="#">Submenu item 2</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Submenu item 3 &raquo; </a>
+                              <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                  <a class="dropdown-item" href="#">Multi level 1</a>
+                                </li>
+                                <li>
+                                  <a class="dropdown-item" href="#">Multi level 2</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Submenu item 4</a>
+                            </li>
+                            <li>
+                              <a class="dropdown-item" href="#">Submenu item 5</a>
                             </li>
                           </ul>
                         </li>
-                        <li>
-                          <a class="dropdown-item" href="#">Submenu item 4</a>
-                        </li>
-                        <li>
-                          <a class="dropdown-item" href="#">Submenu item 5</a>
-                        </li>
                       </ul>
-                    </li>
-                  </ul>
-                </div>
-                
-
-        
-               
-            </li>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    EXPORT
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" id="export-scene" onclick="export()" >Scene   </a>
-                    <a class="dropdown-item" id="export-scene-bin">GLB</a>
-                    <a class="dropdown-item" id="export-assy">ASSEMBLY</a>
-                    <a class="dropdown-item" id="export-redbnn">BNN</a>
-                    <a class="dropdown-item" id="export-redboo">BOO</a>
-                    <a class="dropdown-item" id="export-redbpp">BPP</a>
-                    <a class="dropdown-item" id="export-redbqq">BQQ</a>
-                    <a class="dropdown-item" id="export-redbrr">BRR</a>
-                    <a class="dropdown-item" id="export-redbss">BSS</a>
-                    <a class="dropdown-item" id="export-redbxx">BXX</a>
-                    <a class="dropdown-item" id="export-redbyy">BYY</a>
-                    <a class="dropdown-item" id="export-redbzz">BZZ</a>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    views
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" onclick="window.open("https://hubs.mozilla.com", "_blank");">Hubs</a>
-                    <a class="dropdown-item" onclick="window.open("https://spoke.mozilla.com", "_blank");">Spoke</a>
-                    <a class="dropdown-item" onclick="window.open("https://sketchfab.com", "_blank");">Sketchfab</a>
-
-                    <a class="dropdown-item" onclick="cmm2()">Cam2</a>
-                    <a class="dropdown-item" onclick="cmm3()">Cam3</a>
-                    <a class="dropdown-item" onclick="cmm4()">Cam4</a>
-                    <a class="dropdown-item" onclick="cmm5()">Cam5</a>
-                    <a class="dropdown-item" onclick="cmm6()">Cam6</a>
-                    <a class="dropdown-item" onclick="cmm7()">Cam7</a>
-                    <a class="dropdown-item" onclick="cmm8()">Cam8</a>
-                    <a class="dropdown-item" onclick="cmm9()">Cam9</a>
-                    <a class="dropdown-item" onclick="cmm10()">Cam10</a>
-
-
-                </div>
-            </li>
-           <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    geometry
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" onclick="newcube()">Box</a>
-                    <a class="dropdown-item" onclick="newsphere()">Sphere</a>
-                    <a class="dropdown-item" onclick="newcyl()">Cylinder</a>
-                    <a class="dropdown-item" onclick="newtet()">Tet</a>
-                    <a class="dropdown-item" onclick="newplane()">Plane</a>
-                    <a class="dropdown-item" onclick="newcircle()">Circle</a>
-                    <a class="dropdown-item" onclick="newcurve()">Curve</a>
-                    <a class="dropdown-item" onclick="newpoint()">Poiint</a>
-                    <a class="dropdown-item" onclick="newline()">Line</a>
-                    <a class="dropdown-item" onclick="newsketch()">Sketch</a>
-                    <a class="dropdown-item" onclick="newaxis()">Axis</a>
-
-                </div>
-            </li>
--->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    utiks
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" onclick="evr()">EnterVR</a>
-                    <a class="dropdown-item" onclick="screenshotp()">PERSP</a>
-                    <a class="dropdown-item" onclick="screenshotr()">RECT</a>
-                   <a class="dropdown-item" onclick="pvis1()">PVIS1</a>
-                    <a class="dropdown-item" onclick="pvis2()">PVIS2</a>
-                    <a class="dropdown-item" onclick="pvis3()">PVIS3</a>
-<!--                    <a class="dropdown-item" onclick="newcurve()">PVIS3</a>
-                    <a class="dropdown-item" onclick="newpoint()">Poiint</a>
-                    <a class="dropdown-item" onclick="newline()">Line</a>
-                    <a class="dropdown-item" onclick="newsketch()">Sketch</a>
-                    <a class="dropdown-item" onclick="newaxis()">Axis</a>
--->
-                </div>
-            </li>
-<!--
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    GLB GEOM
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" onclick="newglbox()">Box</a>
-                    <a class="dropdown-item" onclick="newglbsphere()">Sphere</a>
-                    <a class="dropdown-item" onclick="newglbcylinder()">Cylinder</a>
-                    <a class="dropdown-item" onclick="newglbplane()">Plane</a>
-                    <a class="dropdown-item" onclick="newmodel-1()">Model1</a>
-                    <a class="dropdown-item" onclick="newmodel-2()">Model2</a>
-                    <a class="dropdown-item" onclick="newmodel-3()">Model3</a>
-                    <a class="dropdown-item" onclick="newmodel-4()">Model4</a>
-
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Joints
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" onclick="plainbrg()">PlainBRG</a>
-                    <a class="dropdown-item" onclick="sliding()">Sliding</a>
-                    <a class="dropdown-item" onclick="fixed()">Fixed</a>
-                    <a class="dropdown-item" onclick="balljoint()">Balljoint</a>
-                    <a class="dropdown-item" onclick="distance()">Sphere</a>
-                    <a class="dropdown-item" onclick="hingejoint()">Hinge</a>
-
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Templates
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" onclick="steeredwheel()">Steered</a>
-                    <a class="dropdown-item" onclick="rearwheel()">Axled</a>
-                    <a class="dropdown-item" onclick="vehicle()">Vehicle</a>
-                    <a class="dropdown-item" onclick="crankshaft()">Crankshaft</a>
-                    <a class="dropdown-item" onclick="template2()">T2</a>
-                    <a class="dropdown-item" onclick="template3()">T3</a>
-                    <a class="dropdown-item" onclick="template4()">T4</a>
-                    <a class="dropdown-item" onclick="template5()">T5</a>
-                    <a class="dropdown-item" onclick="template6()">T6</a>
-
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    models
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" onclick="newglbox()">Box</a>
-                    <a class="dropdown-item" onclick="newglbsphere()">Sphere</a>
-                    <a class="dropdown-item" onclick="newglbcylinder()">Cylinder</a>
-                    <a class="dropdown-item" onclick="newglbplane()">Plane</a>
-                    <a class="dropdown-item" onclick="newconetopoint()">Cone2Point</a>
-                    <a class="dropdown-item" onclick="newconetoflat()">Cone2Flat</a>
-                    <a class="dropdown-item" onclick="newtriangleplane()">TriPlane</a>
-                    <a class="dropdown-item" onclick="newcircle()">Circle</a>
-
-                </div>
-            </li>-->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    PART-VIS
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" onclick="visp0()">P0</a>
-                    <a class="dropdown-item" onclick="visp1()">P1</a>
-                    <a class="dropdown-item" onclick="visp2()">P2</a>
-                    <a class="dropdown-item" onclick="visp3()">P3</a>
-                    <a class="dropdown-item" onclick="visp4()">P4</a>
-                    <a class="dropdown-item" onclick="visp5()">P5</a>
-                    <a class="dropdown-item" onclick="visp6()">P6</a>
-                    <a class="dropdown-item" onclick="visp7()">P7</a>
-                    <a class="dropdown-item" onclick="visp8()">P8</a>
-                    <a class="dropdown-item" onclick="visp9()">P9</a>
-
-                </div>
-            </li>
-        </div>
-    </nav>
-
-
-    <script>
+                    </div>      
+                        </nav>
+                    
+                    
+                        <script>
             // Update individual nodes
             document.querySelector('a-scene').addEventListener('loaded', function () {
                 document.getElementById("myNav").style.display = "block";
